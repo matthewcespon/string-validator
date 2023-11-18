@@ -1,0 +1,58 @@
+Requirements for a valid string
+1 String starts with a capital letter
+2 String has an even number of quotation marks
+3 String ends with one of the following sentence termination characters ".","?","!"
+4 String has no period characters other than the last character
+5 Numbers below 13 are spelled out ("one","two","three" etc.)(-no integers in the string < 13)
+
+true = valid sentence
+false = invalid sentence
+
+//Requirement 1
+if character at char 0 is Uppercase
+    return true
+else
+    return false
+
+
+//Requirement 2
+quotation marks counter = 0
+for every character in the string
+    if quotation marks is found
+        increment quotation marks counter
+if even number of quotation marks
+    return true
+else
+    return false
+
+
+//Requirement 3
+get last character of string
+if last character doesnt end with "." &&  last character doesnt end with "!" &&  last character doesnt end with "?"
+    return false
+else
+    return true
+
+
+//Requirement 4
+period counter = 0
+for every character in the string
+    if period is found
+        increment period counter
+if period counter more than 1 OR (period = 1 AND period is not at last character of string)
+    return false
+else
+    return true
+
+
+//Requirement 5
+for every character in the string
+    if current character is a number
+        assign number to currentNumber
+        if next character is a number
+            assign next number to nextNumber (i+1)
+            currentNumber = currentNumber * 10 + nextNumber
+            increment i in for loop by 1 to skip character
+        if number < 13
+            return false
+return true
