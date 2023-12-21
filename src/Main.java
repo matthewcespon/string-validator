@@ -1,4 +1,3 @@
-//Proofpoint Code Assignment - Matthew Cespon
 //  Import Scanner to receive input from keyboard
 import java.util.Scanner;
 
